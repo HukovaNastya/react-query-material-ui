@@ -28,24 +28,24 @@ const CardInner = (props) => {
   console.log(props);
   const classes = useStyles();
    return (
-     <Box style={{position: "relative"}}>
+     <Box>
        <Card 
          className={classes.cardStyles}
-       > 
+        > 
          <CardMedia
            component="img"
            height="240"
            image={`https://img.pokemondb.net/artwork/large/${props.pokemon.name}.jpg`}
-           alt="green iguana"
+           alt={props.pokemon.name}
          />
          <CardContent>
-         <Typography  
-           variant="h5"
-           classes={{h5: classes.myH5Variant}}  
-          >
-          {props.pokemon.name}
-         </Typography>
-      </CardContent>
+           <Typography  
+             variant="h5"
+             classes={{h5: classes.myH5Variant}}  
+           >
+             {props.pokemon.name}
+           </Typography>
+          </CardContent>
        </Card>
      </Box>
    )
